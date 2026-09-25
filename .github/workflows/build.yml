@@ -253,13 +253,7 @@ jobs:
         run: |
           cd YouSlider
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youslider.deb
-
-      - name: Build Alderis
-        run: |
-          cd Alderis
-          make clean package DEBUG=0 FINALPACKAGE=1 ARCHS=arm64
-          mv packages/*.deb ${{ github.workspace }}/alderis.deb
+          mv packages/*.deb ${{ github.workspace }}/
 
       - name: Build YouChooseQuality
         run: |
