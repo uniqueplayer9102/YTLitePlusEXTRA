@@ -192,13 +192,7 @@ jobs:
         run: |
           cd YouPiP
           make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/youpip.deb    
-
-      - name: Build YTUHD
-        run: |
-          cd YTUHD
-          make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
-          mv packages/*.deb ${{ github.workspace }}/ytuhd.deb
+          mv packages/*.deb ${{ github.workspace }}/
 
       - name: Build Return-YouTube-Dislikes
         run: |
